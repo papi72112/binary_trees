@@ -12,10 +12,22 @@ int main(void)
 				   34, 2,  20, 22, 98, 1,  62, 95};
 	size_t n = sizeof(array) / sizeof(array[0]);
 
+	tree = bst_remove(NULL, 12);
+	printf("Removed NULL...\n");
+	printf("Should be nil -> %p\n", (void *)tree);
+
 	tree = array_to_bst(array, n);
 	if (!tree)
 		return (1);
 	binary_tree_print(tree);
+
+	tree = bst_remove(tree, 87);
+	printf("Removed 87...\n");
+	binary_tree_print(tree);
+	if (binary_tree_is_bst(tree))
+		printf("Tree is BST\n\n");
+	else
+		printf("Tree is not BST\n\n");
 
 	tree = bst_remove(tree, 79);
 	printf("Removed 79...\n");

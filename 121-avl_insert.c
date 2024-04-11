@@ -36,29 +36,6 @@ bst_t *_bst_insert(bst_t **tree, int value)
 }
 
 /**
- * _height - a function that measures the height of sub tree of a node
- *           using recursion
- * @node: pointer to the root node of the tree
- * @level: current level in the tree
- *
- * Return: void
- */
-int _height(const binary_tree_t *node, size_t level)
-{
-	int height_left = 0, height_right = 0, height_max = 0;
-
-	if (node == NULL)
-		return (-1);
-	if (node->left == NULL && node->right == NULL)
-		return (level);
-	++level;
-	height_left = _height(node->left, level);
-	height_right = _height(node->right, level);
-	height_max = height_left > height_right ? height_left : height_right;
-	return (height_max);
-}
-
-/**
  * get_avl_imbalance_node - a function that returns the imbalanced node from
  *                          an AVL tree
  * @tree: pointer to the root node of the tree
@@ -77,7 +54,7 @@ avl_t *get_avl_imbalance_node(const binary_tree_t *tree)
 
 	if (!imbalanced_node)
 	{
-		cur_bf = _height(tree->left, 0) - _height(tree->right, 0);
+		cur_bf = binary_tree_balance(tree);
 		if (cur_bf < -1 || cur_bf > 1)
 			return ((avl_t *)tree);
 	}
@@ -89,24 +66,23 @@ avl_t *get_avl_imbalance_node(const binary_tree_t *tree)
  * get_insertion_direction - a function that determines the insertion direction
  *                           of that a new inserted node took
  * @tree: pointer to the root node of the AVL tree
- * @value: value of the newly inserted node
  *
  * Return: insertion direction of the new node
  */
-int get_insertion_direction(const binary_tree_t *tree, int value)
+int get_insertion_direction(const binary_tree_t *tree)
 {
 	int ins_dir = -1;
 
-	if (value < tree->n)
+	if (binary_tree_balance(tree) >= 1)
 	{
-		if (tree->left && value < tree->left->n)
+		if (binary_tree_balance(tree->left) >= 1)
 			ins_dir = LL;
 		else
 			ins_dir = LR;
 	}
 	else
 	{
-		if (tree->right && value < tree->right->n)
+		if (binary_tree_balance(tree->right) >= 1)
 			ins_dir = RL;
 		else
 			ins_dir = RR;
@@ -133,7 +109,7 @@ avl_t *avl_insert(avl_t **tree, int value)
 	imbalanced_node = get_avl_imbalance_node(*tree);
 	if (imbalanced_node)
 	{
-		ins_dir = get_insertion_direction(imbalanced_node, value);
+		ins_dir = get_insertion_direction(imbalanced_node);
 		if (LEFT(ins_dir))
 		{
 			if (ins_dir == LR)

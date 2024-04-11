@@ -100,3 +100,7 @@
 [104-binary_tree_rotate_right.c](./104-binary_tree_rotate_right.c)
 
 - A function that rotates a binary tree to the right.
+
+[110-binary_tree_is_bst.c](./110-binary_tree_is_bst.c)
+
+- A function that checks if a binary tree is a BST.

@@ -143,3 +143,7 @@
 [123-avl_remove.c](./123-avl_remove.c)
 
 - A function that removes a node from an AVL tree.
+
+[124-sorted_array_to_avl.c](./124-sorted_array_to_avl.c)
+
+- A function that builds an AVL tree from a sorted array.

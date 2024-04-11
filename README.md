@@ -25,3 +25,7 @@
 [5-binary_tree_is_root.c](./4-binary_tree_is_root.c)
 
 - A function that checks if a node is a root.
+
+[6-binary_tree_preorder.c](./6-binary_tree_preorder.c)
+
+- A function that goes through a binary tree using pre-order traversal.

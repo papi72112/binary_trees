@@ -66,3 +66,7 @@
 [15-binary_tree_is_full.c](./15-binary_tree_is_full.c)
 
 - A function that checks if a binary tree is a full binary tree.
+
+[16-binary_tree_is_perfect.c](./16-binary_tree_is_perfect.c)
+
+- A function that checks if a binary tree is a perfect binary tree.

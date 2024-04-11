@@ -120,3 +120,10 @@
 [114-bst_remove.c](./114-bst_remove.c)
 
 - A function that removes a node from a BST.
+
+[115-O](./115-O)
+
+- Average time complexities of the following operations in a BST.
+  - Insertion
+  - Deletion
+  - Searching

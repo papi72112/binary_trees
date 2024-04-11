@@ -175,3 +175,10 @@
 
 - A function that converts a Max Binary Heap to sorted array of integers, that
  are sorted in descending order.
+
+[135-O](./135-O)
+
+- Average time complexities of the following operations in a Max Binary Heap.
+  - Insertion
+  - Deletion
+  - Searching

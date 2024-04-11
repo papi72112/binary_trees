@@ -127,3 +127,7 @@
   - Insertion
   - Deletion
   - Searching
+
+[120-binary_tree_is_avl.c](./120-binary_tree_is_avl.c)
+
+- A function that checks if a binary tree is an AVL tree.

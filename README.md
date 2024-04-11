@@ -70,3 +70,7 @@
 [16-binary_tree_is_perfect.c](./16-binary_tree_is_perfect.c)
 
 - A function that checks if a binary tree is a perfect binary tree.
+
+[17-binary_tree_sibling.c](./17-binary_tree_sibling.c)
+
+- A function that returns the sibling of a node.

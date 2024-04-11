@@ -74,3 +74,7 @@
 [17-binary_tree_sibling.c](./17-binary_tree_sibling.c)
 
 - A function that returns the sibling of a node.
+
+[18-binary_tree_uncle.c](./18-binary_tree_uncle.c)
+
+- A function that returns the uncle of a node.

@@ -53,3 +53,8 @@
 [12-binary_tree_leaves.c](./12-binary_tree_leaves.c)
 
 - A function that counts the leaves in a binary tree.
+
+[13-binary_tree_nodes.c](./13-binary_tree_nodes.c)
+
+- A function that counts nodes with at least 1 child in a binary trees
+ (i.e. number of internal nodes).

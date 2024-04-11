@@ -29,6 +29,18 @@ struct binary_tree_s
 	struct binary_tree_s *right;
 };
 
+/**
+ * struct queue_s - Queue for binary tree nodes
+ *
+ * @tree_node: pointer to a binary tree node
+ * @next: pointer to the next element in the queue
+ */
+typedef struct queue_s
+{
+	const struct binary_tree_s *tree_node;
+	struct queue_s *next;
+} queue_t;
+
 /* ------------------------------------------------------------------------- */
 /* BINARY TREE DECLARATIONS                                                  */
 /* ------------------------------------------------------------------------- */
@@ -73,6 +85,7 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 /* Advanced tasks */
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 									 const binary_tree_t *second);
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 
 /* ------------------------------------------------------------------------- */
 /* SUPPORT FUNCTIONS                                                         */

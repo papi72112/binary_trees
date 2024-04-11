@@ -136,6 +136,10 @@
 
 - A function that inserts a value in an AVL tree.
 
-[22-array_to_avl.c](./122-array_to_avl.c)
+[122-array_to_avl.c](./122-array_to_avl.c)
 
 - A function that builds an AVL Tree from an array.
+
+[123-avl_remove.c](./123-avl_remove.c)
+
+- A function that removes a node from an AVL tree.

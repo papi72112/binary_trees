@@ -78,3 +78,9 @@
 [18-binary_tree_uncle.c](./18-binary_tree_uncle.c)
 
 - A function that returns the uncle of a node.
+
+## Advanced
+
+[100-binary_trees_ancestor.c](./100-binary_trees_ancestor.c)
+
+- A function that returns the lowest common ancestor of two nodes.

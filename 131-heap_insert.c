@@ -142,6 +142,8 @@ heap_t *heap_insert(heap_t **root, int value)
 		ins_node->left = new_node = binary_tree_node(ins_node, value);
 	else
 		ins_node->right = new_node = binary_tree_node(ins_node, value);
+	if (new_node == NULL)
+		return (NULL);
 	while (new_node->parent != NULL && new_node->n > new_node->parent->n)
 	{
 		swap_values(&new_node->n, &new_node->parent->n);

@@ -116,3 +116,7 @@
 [113-bst_search.c](./113-bst_search.c)
 
 - A function that searches for a value in a BST.
+
+[114-bst_remove.c](./114-bst_remove.c)
+
+- A function that removes a node from a BST.

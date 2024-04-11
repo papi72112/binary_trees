@@ -104,3 +104,7 @@
 [110-binary_tree_is_bst.c](./110-binary_tree_is_bst.c)
 
 - A function that checks if a binary tree is a BST.
+
+[111-bst_insert.c](./111-bst_insert.c)
+
+- A function that inserts a node into a BST.

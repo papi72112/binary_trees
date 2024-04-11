@@ -33,3 +33,7 @@
 [7-binary_tree_inorder.c](./7-binary_tree_inorder.c)
 
 - A function that goes through a binary tree using in-order traversal.
+
+[8-binary_tree_postorder.c](./8-binary_tree_postorder.c)
+
+- A function that goes through a binary tree using post-order traversal.

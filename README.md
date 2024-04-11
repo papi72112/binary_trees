@@ -147,3 +147,10 @@
 [124-sorted_array_to_avl.c](./124-sorted_array_to_avl.c)
 
 - A function that builds an AVL tree from a sorted array.
+
+[125-O](./125-O)
+
+- Average time complexities of the following operations in a AVL tree.
+  - Insertion
+  - Deletion
+  - Searching

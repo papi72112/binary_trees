@@ -170,3 +170,8 @@
 [133-heap_extract.c](./133-heap_extract.c)
 
 - A function that extracts the root node of a Max Binary Heap.
+
+[134-heap_to_sorted_array.c](./134-heap_to_sorted_array.c)
+
+- A function that converts a Max Binary Heap to sorted array of integers, that
+ are sorted in descending order.

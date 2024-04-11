@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * _enqueue - a function that inserts an element into the queue
+ * __enqueue - a function that inserts an element into the queue
  * @head: double pointer to the head of the queue
  * @tail: double pointer to the tail of the queue
  * @node: pointer to a node in the binary tree
@@ -27,7 +27,8 @@ void __enqueue(queue_t **head, queue_t **tail, const binary_tree_t *node)
 }
 
 /**
- * _dequeue - a function that removes and returns the head element from a queue
+ * __dequeue - a function that removes and returns the head element from a
+ *             queue
  * @head: double pointer to the head of the queue
  * @tail: double pointer to the tail of the queue
  *
@@ -50,21 +51,18 @@ queue_t *__dequeue(queue_t **head, queue_t **tail)
 }
 
 /**
- * free_queue - a function that frees the queue
- * @head: double pointer to the head of the queue
- * @tail: double pointer to the tail of the queue
+ * _swap_values - a function that swaps values of two nodes
+ * @a: pointer to the first node
+ * @b: pointer to the second node
  *
  * Return: void
  */
-void _free_queue(queue_t **head, queue_t **tail)
+void _swap_values(int *a, int *b)
 {
-	queue_t *temp;
+	int temp = *a;
 
-	while (*head != NULL)
-	{
-		temp = __dequeue(head, tail);
-		free(temp);
-	}
+	*a = *b;
+	*b = temp;
 }
 
 /**
@@ -106,8 +104,33 @@ heap_t *get_last_level_order_node(heap_t *root)
  */
 int heap_extract(heap_t **root)
 {
-	heap_t *last_node;
+	heap_t *last_node, *node, *max_node;
+	int root_extract;
 
+	if (root == NULL || *root == NULL)
+		return (0);
+	root_extract = (*root)->n;
 	last_node = get_last_level_order_node(*root);
-	return (last_node->n);
+	(*root)->n = last_node->n;
+	if (last_node->parent && last_node->parent->left == last_node)
+		last_node->parent->left = NULL;
+	else if (last_node->parent)
+		last_node->parent->right = NULL;
+	free(last_node);
+	/* Now correct the heap */
+	node = *root;
+	while (1)
+	{
+		max_node = node;
+		if (node->left && node->left->n > max_node->n)
+			max_node = node->left;
+		if (node->right && node->right->n > max_node->n)
+			max_node = node->right;
+		if (max_node == node->left || max_node == node->right)
+			_swap_values(&node->n, &max_node->n);
+		else
+			break;
+		node = max_node;
+	}
+	return (root_extract);
 }

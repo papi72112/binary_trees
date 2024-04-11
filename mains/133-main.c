@@ -16,19 +16,20 @@ int main(void)
 	tree = array_to_heap(array, n);
 	if (!tree)
 		return (1);
-	/* 	binary_tree_print(tree); */
+	printf("Initially ...\n");
+	binary_tree_print(tree);
 
 	extract = heap_extract(&tree);
 	printf("Extracted: %d\n", extract);
 	binary_tree_print(tree);
 
-	/* extract = heap_extract(&tree);
+	extract = heap_extract(&tree);
 	printf("Extracted: %d\n", extract);
 	binary_tree_print(tree);
 
 	extract = heap_extract(&tree);
 	printf("Extracted: %d\n", extract);
-	binary_tree_print(tree); */
+	binary_tree_print(tree);
 
 	binary_tree_delete(tree);
 	return (0);

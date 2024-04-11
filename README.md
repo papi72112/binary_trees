@@ -166,3 +166,7 @@
 [132-array_to_heap.c](./132-array_to_heap.c)
 
 - A function that builds a Max Binary Heap from an array.
+
+[133-heap_extract.c](./133-heap_extract.c)
+
+- A function that extracts the root node of a Max Binary Heap.

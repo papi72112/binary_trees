@@ -31,7 +31,5 @@ size_t get_height(const binary_tree_t *tree, size_t level)
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
-	size_t level = 0;
-
-	return (get_height(tree, level));
+	return (get_height(tree, 0));
 }

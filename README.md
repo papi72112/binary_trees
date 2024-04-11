@@ -88,3 +88,7 @@
 [101-binary_tree_levelorder.c](./101-binary_tree_levelorder.c)
 
 - A function that goees through a binary tree using level-order traversal.
+
+[102-binary_tree_is_complete.c](./102-binary_tree_is_complete.c)
+
+- A function that checks if a binary tree is a complete binary tree.

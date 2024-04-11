@@ -96,3 +96,7 @@
 [103-binary_tree_rotate_left.c](./103-binary_tree_rotate_left.c)
 
 - A function that rotates a binary tree to the left.
+
+[104-binary_tree_rotate_right.c](./104-binary_tree_rotate_right.c)
+
+- A function that rotates a binary tree to the right.

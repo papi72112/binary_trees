@@ -73,6 +73,12 @@ void free_queue(queue_t **head, queue_t **tail)
  * @tree: pointer to the root node of a tree
  *
  * Return: 1 if the binary tree is complete, otherwise 0.
+ * Description: This function uses the idea of a full node to check if a binary
+ *              tree is a complete binary tree. A full node is a node which has
+ *              both left and right child. A complete binary tree is a binary
+ *              tree where if a node is not full, then it must have the left
+ *              child, and all nodes after the non-full node must also be
+ *              non-full nodes.
  */
 int binary_tree_is_complete(const binary_tree_t *tree)
 {

@@ -158,3 +158,7 @@
 [130-binary_tree_is_heap.c](./130-binary_tree_is_heap.c)
 
 - A function that checks if a binary tree is a valid Max-binary heap.
+
+[131-heap_insert.c](./131-heap_insert.c)
+
+- A function that inserts a value in to a Max Binary Heap.

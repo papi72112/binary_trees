@@ -92,3 +92,7 @@
 [102-binary_tree_is_complete.c](./102-binary_tree_is_complete.c)
 
 - A function that checks if a binary tree is a complete binary tree.
+
+[103-binary_tree_rotate_left.c](./103-binary_tree_rotate_left.c)
+
+- A function that rotates a binary tree to the left.

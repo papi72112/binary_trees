@@ -154,3 +154,7 @@
   - Insertion
   - Deletion
   - Searching
+
+[130-binary_tree_is_heap.c](./130-binary_tree_is_heap.c)
+
+- A function that checks if a binary tree is a valid Max-binary heap.

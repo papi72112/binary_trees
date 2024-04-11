@@ -10,6 +10,10 @@
 
 - A function that inserts a node as the left-child of another node.
 
-[1-binary_tree_insert_right.c](./1-binary_tree_insert_right.c)
+[2-binary_tree_insert_right.c](./2-binary_tree_insert_right.c)
 
 - A function that inserts a node as the right-child of another node.
+
+[3-binary_tree_delete.c](./3-binary_tree_delete.c)
+
+- A function that deletes an entire binary tree.

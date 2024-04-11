@@ -1,184 +1,142 @@
 # 0x1D. C - Binary trees
 
-## Mandatory
+## Description
 
-[0-binary_tree_node.c](./0-binary_tree_node.c)
+In this project we learn about the binary tree data structure.
 
-- A function that creates a binary tree node.
+Binary trees are non-linear hierarchical data structures where each node can have at most two children: a left child and a right child. They are fundamental to many algorithms and data structures in computer science. A binary data structure has the following properties, application, benefits, limitations and types.
 
-[1-binary_tree_insert_left.c](./1-binary_tree_insert_left.c)
+**Properties:**
 
-- A function that inserts a node as the left-child of another node.
+- Nodes contain data and references to their children.
 
-[2-binary_tree_insert_right.c](./2-binary_tree_insert_right.c)
+- The root node is at the top, with no parent.
 
-- A function that inserts a node as the right-child of another node.
+- Each node has 0, 1, or 2 children.
 
-[3-binary_tree_delete.c](./3-binary_tree_delete.c)
+- Children are ordered as left and right.
 
-- A function that deletes an entire binary tree.
 
-[4-binary_tree_is_leaf.c](./4-binary_tree_is_leaf.c)
+**Applications:**
 
-- A function that checks if a node is a leaf.
+- Heap data structure for efficient priority queues.
 
-[5-binary_tree_is_root.c](./4-binary_tree_is_root.c)
+- Binary search trees for efficient data search and sorting.
 
-- A function that checks if a node is a root.
+- Huffman coding for data compression.
 
-[6-binary_tree_preorder.c](./6-binary_tree_preorder.c)
+- Syntax trees for representing the structure of computer programs.
 
-- A function that goes through a binary tree using pre-order traversal.
 
-[7-binary_tree_inorder.c](./7-binary_tree_inorder.c)
+**Benefits:**
 
-- A function that goes through a binary tree using in-order traversal.
+- Efficient for searching and sorting.
 
-[8-binary_tree_postorder.c](./8-binary_tree_postorder.c)
+- Flexibility for representing hierarchical relationships.
 
-- A function that goes through a binary tree using post-order traversal.
+- Widely used in various algorithms and data structures.
 
-[9-binary_tree_height.c](./9-binary_tree_height.c)
 
-- A function that measures the height of a node in a binary tree.
+**Limitations:**
 
-[10-binary_tree_depth.c](./10-binary_tree_depth.c)
+- Can become unbalanced, impacting performance.
 
-- A function that measures the depth of a node in a binary tree.
+- Not ideal for large data sets with many levels.
 
-[11-binary_tree_size.c](./11-binary_tree_size.c)
 
-- A function that measures the size of a binary tree.
+**Types:**
 
-[12-binary_tree_leaves.c](./12-binary_tree_leaves.c)
+There are different types of binary trees. They can be classified as follows
 
-- A function that counts the leaves in a binary tree.
+- **Types of binary trees based on the number of children**:
+    - **Full/Strict/Proper Binary Tree** = A tree where every node has 0 or 2 children.
+    - **Degenerate Binary tree** = A tree where every internal node has one child.
+    - **Skewed Binary Tree** = A degenerate binary tree which is either dominated by the left or right nodes
+- **Types of binary trees based on the completion of levels**:
+    - **Complete Binary Tree** = A binary tree where all the levels are filled except maybe the last level, and that last leaf node must be left oriented
+    - **Perfect Binary Tree** = A binary tree where all internal nodes have two children and all leaf nodes are at the same level.
+    - **Balanced Binary Tree** = A binary tree where for every node the difference in height of its left sub-tree and right sub-tree is not more than an arbitrary `k` value.
 
-[13-binary_tree_nodes.c](./13-binary_tree_nodes.c)
+As much as there are different types of binary trees, there are also different flavors of binary trees.
 
-- A function that counts nodes with at least 1 child in a binary trees
- (i.e. number of internal nodes).
+In this project we worked on four flavors of binary trees:
 
-[14-binary_tree_balance.c](./14-binary_tree_balance.c)
+1.  Simple binary trees
+2.  Binary search trees
+3.  AVL Trees
+4.  Max binary heaps
 
-- A function that measures the balance factor of a binary tree.
+## Simple binary trees
 
-[15-binary_tree_is_full.c](./15-binary_tree_is_full.c)
+Simple binary trees are the general form of binary trees with no special attributes.
 
-- A function that checks if a binary tree is a full binary tree.
+| Functions | Description |
+| --- | --- |
+| [0-binary\_tree\_node.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/0-binary_tree_node.c "./0-binary_tree_node.c") | A function that creates a binary tree node. |
+| [1-binary\_tree\_insert\_left.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/1-binary_tree_insert_left.c "./1-binary_tree_insert_left.c") | A function that inserts a node as the left-child of another node. |
+| [2-binary\_tree\_insert\_right.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/2-binary_tree_insert_right.c "./2-binary_tree_insert_right.c") | A function that inserts a node as the right-child of another node. |
+| [3-binary\_tree\_delete.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/3-binary_tree_delete.c "./3-binary_tree_delete.c") | A function that deletes an entire binary tree. |
+| [4-binary\_tree\_is\_leaf.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/4-binary_tree_is_leaf.c "./4-binary_tree_is_leaf.c") | A function that checks if a node is a leaf. |
+| [5-binary\_tree\_is\_root.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/4-binary_tree_is_root.c "./4-binary_tree_is_root.c") | A function that checks if a node is a root. |
+| [6-binary\_tree\_preorder.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/6-binary_tree_preorder.c "./6-binary_tree_preorder.c") | A function that traverses through a binary tree using pre-order traversal. |
+| [7-binary\_tree\_inorder.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/7-binary_tree_inorder.c "./7-binary_tree_inorder.c") | A function that traverses through a binary tree using in-order traversal. |
+| [8-binary\_tree\_postorder.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/8-binary_tree_postorder.c "./8-binary_tree_postorder.c") | A function that traverses through a binary tree using post-order traversal. |
+| [9-binary\_tree\_height.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/9-binary_tree_height.c "./9-binary_tree_height.c") | A function that measures the height of a node in a binary tree. |
+| [10-binary\_tree\_depth.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/10-binary_tree_depth.c "./10-binary_tree_depth.c") | A function that measures the depth of a node in a binary tree. |
+| [11-binary\_tree\_size.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/11-binary_tree_size.c "./11-binary_tree_size.c") | A function that measures the size of a binary tree. |
+| [12-binary\_tree\_leaves.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/12-binary_tree_leaves.c "./12-binary_tree_leaves.c") | A function that counts the leaves in a binary tree. |
+| [13-binary\_tree\_nodes.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/13-binary_tree_nodes.c "./13-binary_tree_nodes.c") | A function that counts the number of nodes with at least 1 child in a binary trees (i.e. number of internal nodes). |
+| [14-binary\_tree\_balance.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/14-binary_tree_balance.c "./14-binary_tree_balance.c") | A function that measures the balance factor of a binary tree. |
+| [15-binary\_tree\_is\_full.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/15-binary_tree_is_full.c "./15-binary_tree_is_full.c") | A function that checks if a binary tree is a full binary tree. |
+| [16-binary\_tree\_is\_perfect.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/16-binary_tree_is_perfect.c "./16-binary_tree_is_perfect.c") | A function that checks if a binary tree is a perfect binary tree. |
+| [17-binary\_tree\_sibling.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/17-binary_tree_sibling.c "./17-binary_tree_sibling.c") | A function that returns the sibling of a node. |
+| [18-binary\_tree\_uncle.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/18-binary_tree_uncle.c "./18-binary_tree_uncle.c") | A function that returns the uncle of a node. |
+| [100-binary\_trees\_ancestor.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/100-binary_trees_ancestor.c "./100-binary_trees_ancestor.c") | A function that returns the lowest common ancestor of two nodes. |
+| [101-binary\_tree\_levelorder.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/101-binary_tree_levelorder.c "./101-binary_tree_levelorder.c") | A function that traverses through a binary tree using level-order traversal. |
+| [102-binary\_tree\_is\_complete.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/102-binary_tree_is_complete.c "./102-binary_tree_is_complete.c") | A function that checks if a binary tree is a complete binary tree. |
+| [103-binary\_tree\_rotate\_left.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/103-binary_tree_rotate_left.c "./103-binary_tree_rotate_left.c") | A function that rotates a binary tree to the left. |
+| [104-binary\_tree\_rotate\_right.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/104-binary_tree_rotate_right.c "./104-binary_tree_rotate_right.c") | A function that rotates a binary tree to the right. |
 
-[16-binary_tree_is_perfect.c](./16-binary_tree_is_perfect.c)
+## Binary Search Trees
 
-- A function that checks if a binary tree is a perfect binary tree.
+A binary search tree is a binary tree where for every node all the elements in its left sub-tree are smaller in value than the node and all the elements in its right sub-tree are larger in value than the node. This feature is very useful for searching, hence the name Binary Search Tree (BST).
 
-[17-binary_tree_sibling.c](./17-binary_tree_sibling.c)
-
-- A function that returns the sibling of a node.
-
-[18-binary_tree_uncle.c](./18-binary_tree_uncle.c)
-
-- A function that returns the uncle of a node.
-
-## Advanced
-
-[100-binary_trees_ancestor.c](./100-binary_trees_ancestor.c)
-
-- A function that returns the lowest common ancestor of two nodes.
-
-[101-binary_tree_levelorder.c](./101-binary_tree_levelorder.c)
-
-- A function that goees through a binary tree using level-order traversal.
-
-[102-binary_tree_is_complete.c](./102-binary_tree_is_complete.c)
-
-- A function that checks if a binary tree is a complete binary tree.
-
-[103-binary_tree_rotate_left.c](./103-binary_tree_rotate_left.c)
-
-- A function that rotates a binary tree to the left.
-
-[104-binary_tree_rotate_right.c](./104-binary_tree_rotate_right.c)
-
-- A function that rotates a binary tree to the right.
-
-[110-binary_tree_is_bst.c](./110-binary_tree_is_bst.c)
-
-- A function that checks if a binary tree is a BST.
-
-[111-bst_insert.c](./111-bst_insert.c)
-
-- A function that inserts a node into a BST.
-
-[112-array_to_bst.c](./112-array_to_bst.c)
-
-- A function that builds a BST from an array.
-
-[113-bst_search.c](./113-bst_search.c)
-
-- A function that searches for a value in a BST.
-
-[114-bst_remove.c](./114-bst_remove.c)
-
-- A function that removes a node from a BST.
-
-[115-O](./115-O)
-
-- Average time complexities of the following operations in a BST.
-  - Insertion
-  - Deletion
-  - Searching
-
-[120-binary_tree_is_avl.c](./120-binary_tree_is_avl.c)
-
-- A function that checks if a binary tree is an AVL tree.
-
-[121-avl_insert.c](./121-avl_insert.c)
-
-- A function that inserts a value in an AVL tree.
-
-[122-array_to_avl.c](./122-array_to_avl.c)
-
-- A function that builds an AVL Tree from an array.
-
-[123-avl_remove.c](./123-avl_remove.c)
-
-- A function that removes a node from an AVL tree.
-
-[124-sorted_array_to_avl.c](./124-sorted_array_to_avl.c)
-
-- A function that builds an AVL tree from a sorted array.
-
-[125-O](./125-O)
-
-- Average time complexities of the following operations in a AVL tree.
-  - Insertion
-  - Deletion
-  - Searching
-
-[130-binary_tree_is_heap.c](./130-binary_tree_is_heap.c)
-
-- A function that checks if a binary tree is a valid Max-binary heap.
-
-[131-heap_insert.c](./131-heap_insert.c)
-
-- A function that inserts a value in to a Max Binary Heap.
-
-[132-array_to_heap.c](./132-array_to_heap.c)
-
-- A function that builds a Max Binary Heap from an array.
-
-[133-heap_extract.c](./133-heap_extract.c)
-
-- A function that extracts the root node of a Max Binary Heap.
-
-[134-heap_to_sorted_array.c](./134-heap_to_sorted_array.c)
-
-- A function that converts a Max Binary Heap to sorted array of integers, that
- are sorted in descending order.
-
-[135-O](./135-O)
-
-- Average time complexities of the following operations in a Max Binary Heap.
-  - Insertion
-  - Deletion
-  - Searching
+| Functions | Description |
+| --- | --- |
+| [110-binary\_tree\_is\_bst.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/110-binary_tree_is_bst.c "./110-binary_tree_is_bst.c") | A function that checks if a binary tree is a BST. |
+| [111-bst\_insert.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/111-bst_insert.c "./111-bst_insert.c") | A function that inserts a node into a BST. |
+| [112-array\_to\_bst.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/112-array_to_bst.c "./112-array_to_bst.c") | A function that builds a BST from an array. |
+| [113-bst\_search.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/113-bst_search.c "./113-bst_search.c") | A function that searches for a value in a BST. |
+| [114-bst\_remove.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/114-bst_remove.c "./114-bst_remove.c") | A function that removes a node from a BST. |
+| [115-O](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/115-O "./115-O") | Average time complexities for insertion, deletion and searching operations of Binary Search Trees. |
+
+## AVL Trees
+
+AVL tree (named after inventors Adelson-Velsky and Landis) is a self-balancing binary search tree. In an AVL tree the difference between the heights of the left sub-tree and right-sub-tree of a node can only be -1, 0 or 1.
+
+| Functions | Description |
+| --- | --- |
+| [120-binary\_tree\_is\_avl.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/120-binary_tree_is_avl.c "./120-binary_tree_is_avl.c") | A function that checks if a binary tree is an AVL tree. |
+| [121-avl\_insert.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/121-avl_insert.c "./121-avl_insert.c") | A function that inserts a value in an AVL tree. |
+| [122-array\_to\_avl.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/122-array_to_avl.c "./122-array_to_avl.c") | A function that builds an AVL Tree from an array of integers. |
+| [123-avl\_remove.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/123-avl_remove.c "./123-avl_remove.c") | A function that removes a node from an AVL tree. |
+| [124-sorted\_array\_to\_avl.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/124-sorted_array_to_avl.c "./124-sorted_array_to_avl.c") | A function that builds an AVL tree from a sorted array of integers. |
+| [125-O](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/125-O "./125-O") | Average time complexities for insertion, deletion and searching operations of AVL Trees. |
+
+## Max Binary Heap
+
+A binary heap is a complete binary tree that follows a specific order property. The properties are as follows:
+
+- **Min Binary Heap** = The value of each node is smaller than all its descendant nodes. The minimum value will always be at the root.
+- **Max Binary Heap** = The value of each node is larger than all its descendant nodes. The maximum value will always be the root.
+
+In this project we worked with Max Binary heap.
+
+| Functions | Description |
+| --- | --- |
+| [130-binary\_tree\_is\_heap.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/130-binary_tree_is_heap.c "./130-binary_tree_is_heap.c") | A function that checks if a binary tree is a valid Max-binary heap. |
+| [131-heap\_insert.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/131-heap_insert.c "./131-heap_insert.c") | A function that inserts a value in to a Max Binary Heap. |
+| [132-array\_to\_heap.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/132-array_to_heap.c "./132-array_to_heap.c") | A function that builds a Max Binary Heap from an array. |
+| [133-heap\_extract.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/133-heap_extract.c "./133-heap_extract.c") | A function that extracts the root node of a Max Binary Heap. |
+| [134-heap\_to\_sorted\_array.c](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/134-heap_to_sorted_array.c "./134-heap_to_sorted_array.c") | A function that converts a Max Binary Heap to sorted array of integers, that are sorted in descending order. |
+| [135-O](/snap/joplin-desktop/40/opt/joplin-desktop/resources/app/135-O "./135-O") | Average time complexities for insertion, extraction and searching operations of Max Binary Heap. |

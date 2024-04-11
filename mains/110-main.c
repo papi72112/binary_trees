@@ -7,10 +7,18 @@
  */
 int main(void)
 {
-	binary_tree_t *root;
+	binary_tree_t *root = NULL;
 	int bst;
 
+	binary_tree_print(root);
+	bst = binary_tree_is_bst(root);
+	printf("Is NULL bst: %d\n", bst);
+
 	root = binary_tree_node(NULL, 98);
+	binary_tree_print(root);
+	bst = binary_tree_is_bst(root);
+	printf("Is %d bst: %d\n", root->n, bst);
+
 	root->left = binary_tree_node(root, 12);
 	root->right = binary_tree_node(root, 128);
 	root->left->right = binary_tree_node(root->left, 54);

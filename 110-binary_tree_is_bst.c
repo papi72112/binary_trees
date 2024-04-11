@@ -12,7 +12,7 @@ int check_left_tree(const binary_tree_t *node_l, int value)
 {
 	if (node_l == NULL)
 		return (1);
-	if (node_l->n > value)
+	if (node_l->n >= value)
 		return (0);
 	return (check_left_tree(node_l->left, value) &&
 			check_left_tree(node_l->right, value));
@@ -30,7 +30,7 @@ int check_right_tree(const binary_tree_t *node_r, int value)
 {
 	if (node_r == NULL)
 		return (1);
-	if (node_r->n < value)
+	if (node_r->n <= value)
 		return (0);
 	return (check_right_tree(node_r->left, value) &&
 			check_right_tree(node_r->right, value));

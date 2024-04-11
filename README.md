@@ -112,3 +112,7 @@
 [112-array_to_bst.c](./112-array_to_bst.c)
 
 - A function that builds a BST from an array.
+
+[113-bst_search.c](./113-bst_search.c)
+
+- A function that searches for a value in a BST.

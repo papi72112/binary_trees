@@ -8,15 +8,20 @@
 int main(void)
 {
 	heap_t *tree;
-	int array[] = {79, 47, 68, 87, 84, 91, 21, 32,
-				   34, 2,  20, 22, 98, 1,  62, 95};
+	int array[] = {79, 47, 68};
 	size_t n = sizeof(array) / sizeof(array[0]);
 	int extract;
 
+	/* int array[] = {79, 47, 68, 87, 84, 91, 21,
+								  32, 34, 2,  20, 22, 98, 1,  62, 95}; */
 	tree = array_to_heap(array, n);
 	if (!tree)
 		return (1);
 	printf("Initially ...\n");
+	binary_tree_print(tree);
+
+	extract = heap_extract(&tree);
+	printf("Extracted: %d\n", extract);
 	binary_tree_print(tree);
 
 	extract = heap_extract(&tree);

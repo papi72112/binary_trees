@@ -112,25 +112,30 @@ int heap_extract(heap_t **root)
 	root_extract = (*root)->n;
 	last_node = get_last_level_order_node(*root);
 	(*root)->n = last_node->n;
-	if (last_node->parent && last_node->parent->left == last_node)
-		last_node->parent->left = NULL;
-	else if (last_node->parent)
-		last_node->parent->right = NULL;
-	free(last_node);
-	/* Now correct the heap */
-	node = *root;
-	while (1)
+	if (last_node == *root)
+		*root = NULL;
+	else
 	{
-		max_node = node;
-		if (node->left && node->left->n > max_node->n)
-			max_node = node->left;
-		if (node->right && node->right->n > max_node->n)
-			max_node = node->right;
-		if (max_node == node->left || max_node == node->right)
-			_swap_values(&node->n, &max_node->n);
+		if (last_node->parent->left == last_node)
+			last_node->parent->left = NULL;
 		else
-			break;
-		node = max_node;
+			last_node->parent->right = NULL;
+		/* Now correct the heap */
+		node = *root;
+		while (node != NULL)
+		{
+			max_node = node;
+			if (node->left && node->left->n > max_node->n)
+				max_node = node->left;
+			if (node->right && node->right->n > max_node->n)
+				max_node = node->right;
+			if (max_node == node->left || max_node == node->right)
+				_swap_values(&node->n, &max_node->n);
+			else
+				break;
+			node = max_node;
+		}
 	}
+	free(last_node);
 	return (root_extract);
 }

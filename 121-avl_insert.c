@@ -75,14 +75,14 @@ int get_insertion_direction(const binary_tree_t *tree)
 
 	if (binary_tree_balance(tree) >= 1)
 	{
-		if (binary_tree_balance(tree->left) >= 1)
+		if (binary_tree_balance(tree->left) >= 0)
 			ins_dir = LL;
 		else
 			ins_dir = LR;
 	}
 	else
 	{
-		if (binary_tree_balance(tree->right) >= 1)
+		if (binary_tree_balance(tree->right) >= 0)
 			ins_dir = RL;
 		else
 			ins_dir = RR;

@@ -162,3 +162,7 @@
 [131-heap_insert.c](./131-heap_insert.c)
 
 - A function that inserts a value in to a Max Binary Heap.
+
+[132-array_to_heap.c](./132-array_to_heap.c)
+
+- A function that builds a Max Binary Heap from an array.

@@ -108,3 +108,7 @@
 [111-bst_insert.c](./111-bst_insert.c)
 
 - A function that inserts a node into a BST.
+
+[112-array_to_bst.c](./112-array_to_bst.c)
+
+- A function that builds a BST from an array.

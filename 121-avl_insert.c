@@ -135,7 +135,12 @@ avl_t *avl_insert(avl_t **tree, int value)
 	{
 		ins_dir = get_insertion_direction(imbalanced_node, value);
 		if (ins_dir == LL)
-			imbalanced_node = binary_tree_rotate_right(imbalanced_node);
+		{
+			if (imbalanced_node == *tree)
+				*tree = binary_tree_rotate_right(imbalanced_node);
+			else
+				binary_tree_rotate_right(imbalanced_node);
+		}
 		else if (ins_dir == LR)
 		{
 			imbalanced_node->left =
@@ -143,10 +148,15 @@ avl_t *avl_insert(avl_t **tree, int value)
 			if (imbalanced_node == *tree)
 				*tree = binary_tree_rotate_right(imbalanced_node);
 			else
-				imbalanced_node = binary_tree_rotate_right(imbalanced_node);
+				binary_tree_rotate_right(imbalanced_node);
 		}
 		else if (ins_dir == RR)
-			imbalanced_node = binary_tree_rotate_left(imbalanced_node);
+		{
+			if (imbalanced_node == *tree)
+				*tree = binary_tree_rotate_left(imbalanced_node);
+			else
+				binary_tree_rotate_left(imbalanced_node);
+		}
 		else if (ins_dir == RL)
 		{
 			imbalanced_node->right =
@@ -154,7 +164,7 @@ avl_t *avl_insert(avl_t **tree, int value)
 			if (imbalanced_node == *tree)
 				*tree = binary_tree_rotate_left(imbalanced_node);
 			else
-				imbalanced_node = binary_tree_rotate_left(imbalanced_node);
+				binary_tree_rotate_left(imbalanced_node);
 		}
 		imbalanced_node = get_avl_imbalance_node(*tree);
 	}

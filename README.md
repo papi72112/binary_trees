@@ -62,3 +62,7 @@
 [14-binary_tree_balance.c](./14-binary_tree_balance.c)
 
 - A function that measures the balance factor of a binary tree.
+
+[15-binary_tree_is_full.c](./15-binary_tree_is_full.c)
+
+- A function that checks if a binary tree is a full binary tree.

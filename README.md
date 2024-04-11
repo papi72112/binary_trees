@@ -37,3 +37,7 @@
 [8-binary_tree_postorder.c](./8-binary_tree_postorder.c)
 
 - A function that goes through a binary tree using post-order traversal.
+
+[9-binary_tree_height.c](./9-binary_tree_height.c)
+
+- A function that measures the height of a node in a binary tree.

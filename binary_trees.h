@@ -9,6 +9,12 @@
 #include <stdlib.h>
 #include <strings.h>
 
+/* Insertion Directions */
+#define LL 0
+#define LR 1
+#define RR 11
+#define RL 10
+
 /* ------------------------------------------------------------------------- */
 /* DATA STRUCTURES                                                           */
 /* ------------------------------------------------------------------------- */
@@ -97,6 +103,7 @@ bst_t *bst_search(const bst_t *tree, int value);
 bst_t *bst_remove(bst_t *root, int value);
 
 int binary_tree_is_avl(const binary_tree_t *tree);
+avl_t *avl_insert(avl_t **tree, int value);
 
 /* ------------------------------------------------------------------------- */
 /* SUPPORT FUNCTIONS                                                         */

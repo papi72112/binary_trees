@@ -131,3 +131,7 @@
 [120-binary_tree_is_avl.c](./120-binary_tree_is_avl.c)
 
 - A function that checks if a binary tree is an AVL tree.
+
+[121-avl_insert.c](./121-avl_insert.c)
+
+- A function that inserts a value in an AVL tree.

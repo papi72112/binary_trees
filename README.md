@@ -58,3 +58,7 @@
 
 - A function that counts nodes with at least 1 child in a binary trees
  (i.e. number of internal nodes).
+
+[14-binary_tree_balance.c](./14-binary_tree_balance.c)
+
+- A function that measures the balance factor of a binary tree.

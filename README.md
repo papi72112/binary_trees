@@ -135,3 +135,7 @@
 [121-avl_insert.c](./121-avl_insert.c)
 
 - A function that inserts a value in an AVL tree.
+
+[22-array_to_avl.c](./122-array_to_avl.c)
+
+- A function that builds an AVL Tree from an array.

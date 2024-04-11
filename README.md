@@ -49,3 +49,7 @@
 [11-binary_tree_size.c](./11-binary_tree_size.c)
 
 - A function that measures the size of a binary tree.
+
+[12-binary_tree_leaves.c](./12-binary_tree_leaves.c)
+
+- A function that counts the leaves in a binary tree.

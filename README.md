@@ -41,3 +41,7 @@
 [9-binary_tree_height.c](./9-binary_tree_height.c)
 
 - A function that measures the height of a node in a binary tree.
+
+[10-binary_tree_depth.c](./10-binary_tree_depth.c)
+
+- A function that measures the depth of a node in a binary tree.

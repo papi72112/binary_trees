@@ -9,3 +9,7 @@
 [1-binary_tree_insert_left.c](./1-binary_tree_insert_left.c)
 
 - A function that inserts a node as the left-child of another node.
+
+[1-binary_tree_insert_right.c](./1-binary_tree_insert_right.c)
+
+- A function that inserts a node as the right-child of another node.
